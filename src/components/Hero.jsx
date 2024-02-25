@@ -26,7 +26,7 @@ function Hero() {
             </div>
             {/* <div class="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl h-[24px] max-w-[301px] md:h-[42px] md:max-w-[512px]"></div>
             <div class="relative mx-auto bg-gray-800 rounded-b-xl h-[55px] max-w-[83px] md:h-[95px] md:max-w-[142px]"></div> */}
-            <Button BG_COLOR="bg-red-500 w-40" to="signup" text="Get Started   >" />
+            <Button BG_COLOR="bg-red-700 text-xl font-semibold w-56" to="signup" text="Get Started   >" />
 
         </div>
     )

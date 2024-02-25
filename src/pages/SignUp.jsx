@@ -13,7 +13,7 @@ function SignUp() {
                         <div class="p-6  space-y-4 md:space-y-6 sm:p-8">
 
                             <form class="space-y-4 md:space-y-6 flex flex-col items-center" action="#">
-                                <h1 class=" font-semibold text-2xl leading-tight tracking-tight text-white md:text-2xl dark:text-white">
+                                <h1 class=" font-semibold text-2xl leading-tight tracking-tight text-red-500 md:text-2xl dark:text-white">
                                     CREATE ACCOUNT
                                 </h1>
                                 {/* username */}

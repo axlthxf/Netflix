@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
+import Main from "./components/Main";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/signup" element={<SignUp/>}/>
           <Route path="/signin" element={<Login/>}/>
         </Routes>
+        <Main/>
         <Footer />
 
       </div>

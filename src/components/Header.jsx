@@ -8,13 +8,13 @@ function Header() {
              <img src="/asset/netflix.png" className="w-24" />
            </Link>
             <div className="flex gap-4 items-center">
-            <select name="language" id="lang" className="text-white border border-red-600 border-4 bg-orange-900 rounded-lg w-18 h-12">
+            <select name="language" id="lang" className="text-white border border-white  bg-black rounded-md w-24 h-10">
                 <option value="language">English</option>
                 <option value="language">Hindi</option>
                 <option value="language">Malyalam</option>
             </select>
-            <Button BG_COLOR="bg-red-700" to="/signup" text="sign up"/>
-            <Button BG_COLOR="bg-red-700" to="/signin" text="sign in"/>
+            <Button BG_COLOR="bg-red-700" to="/signup" text="Sign up"/>
+            <Button BG_COLOR="bg-red-700" to="/signin" text="Sign in"/>
          
         </div>
         </div>
