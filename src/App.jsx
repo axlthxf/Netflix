@@ -10,6 +10,8 @@ import {
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Main from "./components/Main";
+import StateExamples from "./pages/StateExamples";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -18,11 +20,13 @@ function App() {
 
         <Header />
         <Routes>
-          <Route path="/" element={<Hero/>}/>
-          <Route path="/signup" element={<SignUp/>}/>
-          <Route path="/signin" element={<Login/>}/>
+          <Route path="/" element={<Hero />} />
+          <Route path="/state" element={<StateExamples />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<Login />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
-        <Main/>
+         
         <Footer />
 
       </div>
