@@ -10,17 +10,17 @@ function Hero() {
     const [count, setcount] = useState(0);
     const [calculate,setCalculation]=useState(0)
 
-    useEffect(()=>{
-        setTimeout(()=>{
-            setcount((count)=>count+1);
-        },1000);
+    // useEffect(()=>{
+    //     setTimeout(()=>{
+    //         setcount((count)=>count+1);
+    //     },);
         // if(count > 10)
         // alert("Count exceeded "+ count + "."+ calculate);
         // else
         // {
         //     alert("welcome to netflix");
         // }
-    },[count,calculate])
+    // },[count,calculate])
 
      let contents = [{
         Heading: "Enjoy your tv",

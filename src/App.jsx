@@ -14,6 +14,8 @@ import StateExamples from "./pages/StateExamples";
 import PageNotFound from "./pages/PageNotFound";
 import Display from "./pages/Display";
 import Category from "./components/Category";
+import MovieDetails from "./pages/MovieDetails"
+
 
 function App() {
   return (
@@ -26,12 +28,14 @@ function App() {
           <Route path="/state" element={<StateExamples />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<Login />} />
-          <Route path="*" element={<PageNotFound />} />
           <Route path="/AllMovies" element={<Display />} />
           <Route path="/category" element={<Category />} />
-          
+          <Route path="/Movies/:Movieid" element={<MovieDetails/>} />
+  
+          <Route path="*" element={<PageNotFound />} />
+
         </Routes>
-         
+
         <Footer />
 
       </div>

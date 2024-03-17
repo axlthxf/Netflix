@@ -5,7 +5,7 @@ import Data from '../components/Data'
 function Display() {
   return (
     <div>
-      <p className='text-2xl fond-bold text-white'>ALL MOVIES</p>
+      <p className='text-2xl fond-extrabold text-white p-4'>ALL MOVIES</p>
       <Data/>
     </div>
   )
