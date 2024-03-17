@@ -1,6 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import supabase from '../Supabase'
+import { useNavigate } from 'react-router-dom'
+import Loader from '../components/Loader'
 
 function SignUp() {
     const [username, setusername] = useState("")
@@ -8,8 +10,29 @@ function SignUp() {
     const [password, setpassword] = useState("")
     const [confirmpassword, setconfirmpassword] = useState("")
     const [passwordcheck, setpasswordcheck] = useState(false)
+    const navigate = useNavigate()
+    const [Loading, setLoading] = useState(true)
+
+    async function getdata() {
+
+        const { data: { user } } = await supabase.auth.getUser()
+        return user
+    }
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000)
+
+        getdata().then((user) => {
+            console.log(user)
+            if (user?.aud) {
+                navigate('/AllMovies')
+            }
+        })
+    }, [])
     
-    return (
+    return Loading ? (
+        <Loader />) : (
         <div className='flex flex-col justify-center items-center'>
             <section class=" dark:bg-gray-900 w-full sm:w-6/12 xl:px-24 ">
                 <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -72,7 +95,9 @@ function SignUp() {
 
                                     if (error) {
                                         console.log("error" + error)
+                                        return
                                     }
+                                    navigate('/AllMovies')
                                if(password !== confirmpassword) {
 
                                setpasswordcheck(true)
